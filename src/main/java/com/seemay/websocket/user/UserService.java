@@ -12,7 +12,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     public void saveUser(User user) {
-        user.setStatus(Status.OMLINE);
+        user.setStatus(Status.ONLINE);
         userRepository.save(user);
     }
 
@@ -26,6 +26,6 @@ public class UserService {
     }
 
     public List<User> findConnectedUsers() {
-        return userRepository.findAllByStatus(Status.OMLINE);
+        return userRepository.findAllByStatus(Status.ONLINE);
     }
 }
